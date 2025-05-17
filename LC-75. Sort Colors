@@ -1,0 +1,29 @@
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int low = 0, mid = 0, high = nums.size() - 1;
+
+        // Dutch National Flag algorithm
+        // Maintains three regions:
+        // 0 to low - 1      → All 0s
+        // low to mid - 1    → All 1s (being explored)
+        // high + 1 to end   → All 2s
+
+        while (mid <= high) {
+            if (nums[mid] == 0) {
+                // Swap current 0 to the beginning
+                swap(nums[low], nums[mid]);
+                low++;
+                mid++;
+            } else if (nums[mid] == 1) {
+                // Correct position, just move forward
+                mid++;
+            } else { // nums[mid] == 2
+                // Swap current 2 to the end
+                swap(nums[mid], nums[high]);
+                high--;
+                // Don't increment mid yet because the swapped-in element needs to be processed
+            }
+        }
+    }
+};
