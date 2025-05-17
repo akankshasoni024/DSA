@@ -1,0 +1,36 @@
+//You are given a string s and an integer k. You need to delete the minimum number of characters so that the string contains at most k distinct characters.
+
+class Solution {
+public:
+    int minDeletion(string s, int k) {
+        unordered_map<char, int> freq;
+        for (char ch : s) {
+            freq[ch]++;
+        }
+
+        if (freq.size() <= k) return 0;
+
+        vector<int> counts;
+        for (auto& p : freq) {
+            counts.push_back(p.second);
+        }
+
+        sort(counts.begin(), counts.end());
+
+        int deletions = 0;
+        int toRemove = counts.size() - k;
+
+        for (int i = 0; i < toRemove; i++) {
+            deletions += counts[i];
+        }
+
+        return deletions;
+    }
+};
+
+//Approach: 
+//1.Count frequency of each character using a hash map.
+//2.Push the frequencies into a min-heap or sort them.
+//3.If distinct characters <= k, return 0 (no need to delete).
+//4.Else, keep removing lowest frequency characters and update the count until only k distinct characters remain.
+//5.Return the sum of frequencies of the removed characters.
