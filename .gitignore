@@ -1,0 +1,25 @@
+# Ignore input and output files
+input.txt
+output.txt
+
+# Ignore all other non-C++ files
+*.exe
+*.o
+*.out
+*.log
+*.a
+*.so
+*.dll
+*.bin
+*.class
+*.pyc
+*.jar
+*.csv
+*.json
+*.xml
+*.zip
+*.tar
+*.gz
+*.DS_Store
+.vscode/
+.idea/
