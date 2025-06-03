@@ -23,3 +23,19 @@ output.txt
 *.DS_Store
 .vscode/
 .idea/
+
+# Ignore macOS debug symbol folders
+*.dSYM/
+
+# Ignore compiled binary files (no extension)
+BubbleSort
+InsertionSort
+SelectionSort
+
+# Or more generally, ignore all files with no extension in the Sorting folder
+Sorting/*/
+
+# Optional: ignore any binary or object files
+*.out
+*.o
+*.exe
