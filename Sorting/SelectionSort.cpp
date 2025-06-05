@@ -34,3 +34,5 @@ int main (){
 //Complexity- O(n^2)- worst case
 //smallestIdx - assumed that i is smallest no. so initialiized with i first
 //later compared with J and if found smaller than j is stored in smalllestIdx var
+// For descending order just change   if(arr[j]>arr[smallestIdx]) 
+//Because than it will swap for opposite condition when smallest index is smalller than swap
