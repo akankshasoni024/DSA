@@ -71,7 +71,7 @@ cout<<endl;
 //3. copy the temp array again in the original array
 
 //TC is calculated by total recursive call *work done in each call
-//Total recursive calls = n+ n/2+n/3+n/4.... 1(size is 1) hence n/2^k =log n base 2 => log n
+//Total recursive calls = n+ n/2+n/4+n/8.... 1(size is 1) hence n/2^k =log n base 2 => log n
 //work done in each call = merge sort = constant time + merge = O(n)
 // So final TC is O(n log n)
 //Space Complexity is O(N) due to temp array

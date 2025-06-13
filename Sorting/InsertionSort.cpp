@@ -17,11 +17,13 @@ void InsertionSort(int arr[], int n)
         int curr = arr[i];
         int prev = i - 1;
         //for descending order just change condition to arr[prev] < curr
+        //make other elements shift in right to make place for current element
         while (prev >= 0 && arr[prev] > curr)
         {
             arr[prev + 1] = arr[prev];
             prev--;
         }
+        //Make current element to its correct location
         arr[prev + 1] = curr;
         printArr(arr, n);
     }
