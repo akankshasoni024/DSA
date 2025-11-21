@@ -36,6 +36,17 @@ int main()
     InsertionSort(arr, n);
 }
 
+
+prev  curr
+i-1   i
+// 4, 2, 5, 3, 1 
+// 1 ,4, 2, 5, 3, 
+// 1 _ 2 5 3
+// 1 2 4 5 3
+// 1 2 _ 5 3
+// 1 2 3 4 5 
+
+
 // Time Complexity- 0(n^2)
 // smallest element will reach to its correct location after each pass
 // curr: for current element that shows starting of unsorted which we are trying to insert

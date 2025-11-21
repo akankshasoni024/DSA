@@ -8,7 +8,7 @@ int main(){
     int largest=arr[0];
     int idx;
    
-    for (int st=0;st<size;st++){
+    for (int st=0;st<size;st++){ 
         for(int end = st; end<size; end++){
             //print
             for (int i = st; i < end; i++)

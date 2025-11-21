@@ -10,9 +10,11 @@ void printArr(int arr[], int n)
     cout << endl;
 }
 
+
+
 void BubbleSort(int arr[], int n)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n - 1; i++) 
     {
         bool isSwapped = false;
         for (int j = 0; j < n - i - 1; j++)
@@ -28,6 +30,18 @@ void BubbleSort(int arr[], int n)
         printArr(arr, n);
     }
 }
+
+// i=0 j=0
+
+
+// 5 3 2 4 1
+// 3 2 4 1 5
+// 3 2 1 4 5
+
+// 5 1 2 3 4 
+// 1 2 3 4 5
+
+
 
 int main()
 {

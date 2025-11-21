@@ -8,6 +8,10 @@ void printArr(int arr[], int n)
     }
     cout << endl;
 }
+
+
+
+
 void selectionSort(int arr[], int n){
     for (int i = 0; i < n-1; i++)
     {
@@ -18,11 +22,22 @@ void selectionSort(int arr[], int n){
                 smallestIdx=j;
             }
         }
+        // swap with unsorted part start
         swap(arr[i],arr[smallestIdx]);
     }
     printArr(arr, n);
     
 }
+
+// i=0 j=1
+//4,1,5,3,2
+//s -----us-
+//1 4   5 3 2
+// 1 2  5 3 4
+
+
+
+
 
 int main (){
     int n= 5;
@@ -30,6 +45,10 @@ int main (){
     selectionSort(arr,n);
     return 0;
 }
+
+
+
+
 
 //Complexity- O(n^2)- worst case
 //smallestIdx - assumed that i is smallest no. so initialiized with i first

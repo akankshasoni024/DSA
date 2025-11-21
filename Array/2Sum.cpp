@@ -27,3 +27,5 @@ int main(){
     vector<int> result=twosum(arr,target);
     cout<<result[0]<<','<<result[1];
 }
+
+//m is hash map for visisted values from the vector arr

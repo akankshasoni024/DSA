@@ -5,7 +5,7 @@ int partition(vector<int> &arr, int st, int end)
 {
     int idx = st - 1;
     int pivot = arr[end];
-    for (int j = st; j < end; j++)
+    for (int j = st; j < end; j++)  // O(n)
     {//if (arr[j]>=pivot) sort array into descending order
         if (arr[j] <= pivot)
         {
@@ -24,8 +24,8 @@ void qs(vector<int> &arr, int st, int end)
     if (st < end)
     {
 
-        int pivIdx = partition(arr, st, end);
-        qs(arr, st, pivIdx - 1);  // left
+        int pivIdx = partition(arr, st, end); 
+        qs(arr, st, pivIdx - 1);  // left  // O(log n)
         qs(arr, pivIdx + 1, end); // right
     }
 }
@@ -42,7 +42,7 @@ int main()
 }
 
 // partition function is responsible for dividing the array based on pivot value and setting it up in the center 
-// by comaparing each value with the pivot value (end value is considered here)
+// by comparing each value with the pivot value (end value is considered here)
 // -setting up smaller values in the left and the larger values in the right of the pivot value 
 // Two pointer  are use : 
 // 1. idx- it is responsible for finding postion of an element in the array
